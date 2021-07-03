@@ -14,7 +14,7 @@ updateTime: 2021.7.1 11:22
 #ck 优先读取【JDCookies.txt】 文件内的ck  再到 ENV的 变量 JD_COOKIE='ck1&ck2' 最后才到脚本内 cookies=ck
 cookies=''
 #助力账号，填写pt_pin或用户名的值，如 zlzh = ['aaaa','xxxx','yyyy'] ,支持ENV export zlzh=['CurtinLV','xxxx','yyyy']
-export zlzh='pt_key=AAJg38yaADBqVm4OKGmYTDlNQD5kt24inPWV4gT7DNCOOIB48L8wUPofaEA2DWhLC6BPiLi-E7Y;pt_pin=jd_4e3b1efd8bf90;' 
+
 #####
 
 
@@ -147,10 +147,10 @@ if "JD_COOKIE" in os.environ:
         cookies = os.environ["JD_COOKIE"]
         print("已获取并使用Env环境 Cookie")
 if "zlzh" in os.environ:
-    if len(os.environ["zlzh"]) > 1:
-        zlzh = os.environ["zlzh"]
-        zlzh = zlzh.replace('[', '').replace(']', '').replace('\'', '').replace(' ', '').split(',')
-        print("已获取并使用Env环境 zlzh:", zlzh)
+    if len(os.environ["jd_4e3b1efd8bf90"]) > 1:
+        jd_4e3b1efd8bf90 = os.environ["jd_4e3b1efd8bf90"]
+        jd_4e3b1efd8bf90 = jd_4e3b1efd8bf90.replace('[', '').replace(']', '').replace('\'', '').replace(' ', '').split(',')
+        print("已获取并使用Env环境 zlzh:", jd_4e3b1efd8bf90)
 
 getCk = getJDCookie()
 getCk.getCookie()
